@@ -44,6 +44,7 @@ img{
     font-weight: bold;
     margin-bottom: 40px;
     text-align: center;
+    white-space:nowrap;
 }
 .all{/*主內容全體容器*/
     display: flex;
@@ -83,7 +84,7 @@ img{
     align-items: center;
     padding: 10px;
     width: 100px;
-    white-space:nowrap
+    white-space:nowrap;
 }
 .promo-pic{/*promo長方形相片*/
     flex: none;
