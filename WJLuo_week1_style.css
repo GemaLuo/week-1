@@ -1,9 +1,7 @@
-html{font-size: 100%; font-size: 20px;}
-body{margin: 0; font-size: 1rem;}
+body{margin: 0; font-size: 20px;}
 img{
     display: block;
     object-fit: cover;
-    max-width: 100%;
 }
 
 .menu{ /*容器*/
@@ -32,78 +30,152 @@ img{
     flex:auto;
 }
 .welcome{/*歡迎文字容器*/
+    height: 300px;
     justify-content: center;
     align-items: center;
+
 }
 .banner{/*歡迎文字*/
     background-color: rgb(219, 243, 251);
     padding-top:130px;
     padding-bottom: 130px;
-    font-size: 2rem;
+    font-size: 40px;
     height: 40px;
     font-weight: bold;
     margin-bottom: 40px;
     text-align: center;
-    white-space: nowrap;
 }
-
-.promotion{ /*promo容器*/
+.all{/*主內容全體容器*/
     display: flex;
-    justify-content:center;
-    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
-.box{/*promo長方框*/
-    flex:none;
-    background-color: rgb(219, 243, 251);
-    width: 490px;
-    padding-left: 10px;
-    text-align: left; 
-    line-height: 50px;
-    margin-right: 20px;
-    margin-bottom: 40px;
-}
-.picture{/*promo長方形相片*/
-    flex:none;     
-    margin-left: 20px;
-    margin-bottom: 40px; 
+.all-content{/*主內容全體*/
+    flex: none;
+    width: 1200px;
 }
 
+.promotion{ /*promotion容器*/
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.promo-left{/*左promo長方框容器*/
+    display: flex;
+    background-color: rgb(219, 243, 251);
+    width: 50%;
+    height: 50px;
+    margin-right: 10px;
+}
+.promo-right{/*右pro長方框容器*/
+    display: flex;
+    background-color: rgb(219, 243, 251);
+    width: 50%;
+    height: 50px;
+    margin-left: 10px;
+}
+.promo-box{/*promo文字容器*/
+    display: flex;
+    align-items: center;
+}
+.txt{/*promo text*/
+    flex: none;
+    align-items: center;
+    padding: 10px;
+    width: 100px;
+}
+.promo-pic{/*promo長方形相片*/
+    flex: none;
+    width: 80px; 
+}
+
+/*主內容下半部*/
 .pics{/*容器*/
     display: flex;
-    align-content: center;
-    justify-content: center;
+    align-items: center;
 }
 
-.main1, .main2, .main3, .main4{ /*主內容照片設定平行*/
-    flex: none;
-    width: 270px;
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 80px;
-}
-
-.title1, .title2, .title3, .title4{/*主內容小長方框設定*/
-    flex: none;
+.main1{/*圖片+文字的容器*/
+    flex: auto;
     margin-right: 10px;
-    margin-bottom: 40px;
-    width: 270px;
-    background-color:rgb(219, 243, 251);
-    line-height: 50px;
-    text-align: center;
+    width: 285px;
+} 
+.main2{ /*圖片+文字的容器*/
+    flex: auto;
+    width: 285px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.main3{/*圖片+文字的容器*/
+    flex: auto;
+    width: 285px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.main4{ /*圖片+文字的容器*/
+    flex: auto;
+    width: 285px;
+    margin-left: 10px;
 }
 
+.title{/*主內容小長方框*/
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(219, 243, 251);
+    margin-bottom: 20px;
+}
+.title-txt{/*主內容框文字*/
+    flex: none;
+    text-align: center;
+    padding: 10px;
+}
+.main-pic{
+    flex: none;
+    width: 285px;
+    height: 100%;
+}
 @media (max-width: 1200px){
-    .promotion{
-        flex-wrap: wrap;
+    .all-content{
+        width: 90%;
     }
-    .box{
-        width: 29%;
+    .promotion{
+        margin-bottom: 0px;
     }
     .pics{
-        flex-wrap: wrap
+        flex-wrap: wrap;
     }
+    .title{
+        margin-bottom: 0px;
+    }
+    .main1{
+        width: 45%;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .main2, .main3{
+        width: 45%;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    .main4{
+        width: 45%;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .main-pic{
+        flex: none; /*flex子項寬度就是內容寬度，且內容不會換行*/
+        height: 100%;
+        width: 100%;
+    }
+
+
 }
 @media (max-width: 600px){
+    .banner{
+        font-size: 35px;
+    }
     .item{
         flex:auto; text-align: right;
         display: none;     
@@ -112,14 +184,34 @@ img{
         text-align: right;
         display: block;
     }
-    .box{
-        width: 62%;
-    }
-    .welcome{
+    .promotion{
         flex-wrap: wrap;
+        margin-bottom: 0px;
     }
-    .banner{
+    .promo-left{
+        width:100%;
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+    .promo-right{
+        width:100%;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    .main1{
         width: 100%;
+        margin-top: 20px;
+        margin-right: 0px;
+    }
+    .main2, .main3{
+        width: 100%;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    .main4{
+        width:100%;
+        margin-left: 0px;
+        margin-top: 20px;
     }
 }
-
