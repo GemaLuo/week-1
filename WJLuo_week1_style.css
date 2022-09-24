@@ -83,6 +83,7 @@ img{
     align-items: center;
     padding: 10px;
     width: 100px;
+    white-space:nowrap
 }
 .promo-pic{/*promo長方形相片*/
     flex: none;
